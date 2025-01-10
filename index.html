@@ -4,22 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather application</title>
+    <link href="src/style.css" rel="styleSheet" />
   </head>
   <body>
-    <h1>welcome to the weather app!</h1>
-    <footer>
-      coded by<a href="https://github.com/Misriblue" target="_blank">
-        Misrak Deressa</a
-      >
-      code hosted on
-      <a href="https://github.com/Misriblue/weather-app" target="_blank"
-        >gitHub</a
-      >
-      and hosted website<a
-        href="https://misriblue1.netlify.app/"
-        target="_blank"
-        >Netlify</a
-      >
-    </footer>
+    <div id="container">
+      <header>
+        <form id="form">
+          <input type="search" placeholder="Enter city" required id="search" />
+          <input type="submit" value="Search" id="submitButton" />
+        </form>
+      </header>
+      <main>
+        <h1>Addis Ababa</h1>
+        <div id="flex">
+          <p>
+            Friday 20:39, clear sky<br />
+            Humidity: 85%, Wind: 3.09km/h
+          </p>
+          <p class="TempratureValue"><span 🌍id="TempratureValue">3</span>°C</p>
+        </div>
+      </main>
+
+      <footer>
+        Coded by<a href="https://github.com/Misriblue" target="_blank">
+          Misrak Deressa</a
+        >
+        open sourced on
+        <a href="https://github.com/Misriblue/weather-app" target="_blank"
+          >GitHub</a
+        >
+        and hosted on<a href="https://misriblue1.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
