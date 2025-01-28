@@ -75,7 +75,7 @@ h1{
     padding-left: 10px;
     text-align: left;
 }
-#valueOfTemprature{
+#humidityvalue,#windspeed{
     color: #f65282;
 }
 footer{

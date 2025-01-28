@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather application</title>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,12 +25,12 @@
        
         <span id="flex">
           <div>
-            <h1>Addis Ababa</h1>
-            <p id="currentTime">Friday 20:39, clear sky</br> Humidity:<strong id="valueOfTemprature">85%</strong>, Wind:<strong id="valueOfTemprature"> 3.09km/h</strong ></p>
+            <h1></h1>
+            <p id="currentTime">Friday 20:39, clear sky</br> Humidity:<strong id="humidityvalue">85%</strong>, Wind:<strong id="windspeed"> 3.09km/h</strong ></p>
           </div>
          <div>
            <p class="TempratureValue">
-            <div id="imoji"> 🌞</div><div id="TempratureValue">3</div><div id="unit">°C</div>  
+            <div id="imoji"> 🌞</div><div id="TempratureValue"></div><div id="unit">°C</div>  
            </p>
           </div>
         </span>
