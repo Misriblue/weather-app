@@ -62,7 +62,7 @@ body{
 }
 #TempratureValue{
     display: inline;
-    font-size: 85px;
+    font-size: 95px;
     font-weight: bolder;
     color: black;
     vertical-align: middle;
@@ -85,7 +85,7 @@ footer{
     color: rgba(0, 0, 0, 0.6);
 }
   
-#currentTime{
+.currentTime{
     margin-left: 30px;
    padding-left:10px;
     margin-bottom: 0;
@@ -95,7 +95,8 @@ footer{
     display: inline-block;
    vertical-align: middle;
     color: black;
-    font-size: 50px;
+    font-size: 40px;
+    padding-bottom: 0;
 
 }
 #unit{
