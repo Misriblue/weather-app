@@ -53,3 +53,24 @@ function dateFormat(date){
 }
 
 searchapi("addis ababa");
+
+function forcastDisplay(){
+    let days = [ "Tues", "wends", "Thurs", "Fri", "Satur"];
+    let forcastHTML=""
+    days.forEach(function(day){
+        forcastHTML=forcastHTML+ `<div>
+          <div class="forcastday">${day}</div>
+          <div class="icon">🌞</div>
+          <div class="tempratures"><strong>15°c</strong>2°c</div>
+          </div>`
+
+    })
+    let forcastElement = document.querySelector(".forcast");
+    forcastElement.innerHTML=forcastHTML;
+    
+
+}
+forcastDisplay()
+
+
+          
