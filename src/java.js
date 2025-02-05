@@ -39,6 +39,7 @@ function weatherdata(response) {
   let weatherimoji = document.querySelector("#imoji");
   weatherimoji.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
   console.log(response.data)
+  getForcast(response.data.city);
 }
 function dateFormat(date){
     let timeElement = document.querySelector("#currentTime");
@@ -47,15 +48,23 @@ function dateFormat(date){
         min=`0${min}`
     }
     let hr=date.getHours()
-    let weekdays=["Sun","Mon","Tues","wends","Thurs","Fri","Satur"]
+    let weekdays=["Sun","Mon","Tues","Wednes","Thurs","Fri","Satur"]
     let days=weekdays[date.getDay()]
     timeElement.innerHTML = `${days}day:${hr}:${min}`;
+    
 }
 
 searchapi("addis ababa");
+function getForcast(city){
+  let key="a92f789ca0a20eb4f3bt9147ao262fde"
+  let APIurl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}`
+  axios.get(APIurl).then(forcastDisplay);
+  
+}
 
-function forcastDisplay(){
-    let days = [ "Tues", "wends", "Thurs", "Fri", "Satur"];
+function forcastDisplay(response){
+  console.log(response.data)
+    let days = [ "Tues", "Wednes", "Thurs", "Fri", "Satur"];
     let forcastHTML=""
     days.forEach(function(day){
         forcastHTML=forcastHTML+ `<div>
@@ -70,7 +79,7 @@ function forcastDisplay(){
     
 
 }
-forcastDisplay()
+
 
 
           
