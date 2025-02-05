@@ -66,14 +66,29 @@ function forcastDisplay(response){
   console.log(response.data)
     let days = [ "Tue", "Wed", "Thu", "Fri", "Sat"];
     let forcastHTML=""
-    days.forEach(function(day){
-        forcastHTML=forcastHTML+ `<div>
-          <div class="forcastday">${day}</div>
-          <div class="icon">🌞</div>
-          <div class="tempratures"><strong>15°c</strong>2°c</div>
-          </div>`
+    response.data.daily.forEach(function(day,index){
+      if(index<5){
+        let date = new Date(day.time * 1000);
+        let datename=forcastDay(date);
+        forcastHTML =
+          forcastHTML +
+          `<div id="weatherForcast">
+          <div class="forcastday">${datename}</div>
+          <div class="icon"><img id="image" src=${day.condition.icon_url}></div>
+          <div class="tempratures"><strong>${Math.round(
+            day.temperature.maximum
+          )}</strong>${Math.round(day.temperature.minimum)}</div>
+          </div>`;
+          
+      }
 
     })
+    function forcastDay(date){
+      let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let days = weekdays[date.getDay()];
+      return days;
+
+    }
     let forcastElement = document.querySelector(".forcast");
     forcastElement.innerHTML=forcastHTML;
     

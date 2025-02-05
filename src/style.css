@@ -117,26 +117,46 @@ footer{
     align-items:center;
     justify-content: space-around;
     gap: 20px;
-    margin-left: 30px;
+    margin-left: 0;
 }
 .forcastday{
     align-items:center ;
     margin: 0 auto;
     color:  rgba(39, 33, 66, 0.4);
     margin-bottom: 10px;
+    padding-left: 20px;
 }
 .icon{
-    align-items:center ;
+    text-align: center;
     margin: 0 auto;
     padding: 10px 0;
+    
+}
+#image{
+    display: block;
+    margin: 0 ;
+    padding: 0;
+    width: 80px;
+    height:80px;
+    text-align: center;
+    
 }
 .tempratures{
   align-items:center ;
   margin: 0 auto; 
   color: #f65282;
   padding-top: 10px;
+  padding-left: 20px;
 }
 strong{
     padding-right: 20px;
     
+}
+#weatherForcast{
+    display: block;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding:10px ;
+
 }
