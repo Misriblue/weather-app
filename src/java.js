@@ -64,7 +64,7 @@ function getForcast(city){
 
 function forcastDisplay(response){
   console.log(response.data)
-    let days = [ "Tues", "Wednes", "Thurs", "Fri", "Satur"];
+    let days = [ "Tue", "Wed", "Thu", "Fri", "Sat"];
     let forcastHTML=""
     days.forEach(function(day){
         forcastHTML=forcastHTML+ `<div>
